@@ -1,10 +1,12 @@
 ﻿using EntityFramework.MVC.Context;
 using EntityFramework.MVC.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace IdentityFrameworkTest.MVC.Controllers
 {
+    [Authorize]
     public class UsersController : Controller
     {
         private readonly AppDbContext _context;
